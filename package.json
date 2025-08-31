@@ -1,0 +1,33 @@
+{
+  "name": "auto-preprocessing-data-application",
+  "version": "1.0.0",
+  "description": "A full-stack application for automatic data preprocessing.",
+  "main": "index.js",
+  "scripts": {
+    "start:frontend": "cd frontend-svelte-app && npm run dev",
+    "start:go-api": "cd backend-go-app && go run main.go",
+    "start:python": "cd python-service && flask --app app run --port 5001",
+    "dev": "concurrently \"npm:start:frontend\" \"npm:start:go-api\" \"npm:start:python\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmadlazim-03/auto-preprocessing-data-application.git"
+  },
+  "keywords": [
+    "svelte",
+    "go",
+    "python",
+    "data-preprocessing"
+  ],
+  "author": "Ahmadlazim-03",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ahmadlazim-03/auto-preprocessing-data-application/issues"
+  },
+  "homepage": "https://github.com/Ahmadlazim-03/auto-preprocessing-data-application#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
